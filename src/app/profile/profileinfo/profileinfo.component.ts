@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profileinfo',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './profileinfo.component.css'
 })
 export class ProfileinfoComponent {
+  constructor(private router: Router) {}
 
+  navegarParaEditProfile () {
+    console.log("Ir para Editar Perfil");
+    this.router.navigate(['/editprofile']);
+  }
 }
